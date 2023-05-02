@@ -2,24 +2,28 @@
 <html>
   <head>
     <title>Game Finder</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="index.js" defer></script>
   </head>
   <body>
-    <h1>Find your next adventure with just a few easy steps!</h1>
-    <form>
-      <label for="genre">Select a Genre:</label>
-      <select id="genre">
-        <option value="action">Action</option>
-        <option value="adventure">Adventure</option>
-        <option value="strategy">Strategy</option>
-      </select>
-      <br><br>
-      <label for="cost">Maximum Cost:</label>
-      <input type="number" id="cost" name="cost">
-      <br><br>
-      <label for="release-date">Maximum Release Date:</label>
-      <input type="date" id="release-date" name="release-date">
-      <br><br>
-      <button type="submit">Search</button>
-    </form>
+    <div id="main">
+        <h1>Game Finder</h1>
+        <div id="search-div">
+            <form>
+                <label for="genre">Select a Genre:</label>
+                <select id="genre">
+                  <option value="action">Action</option>
+                  <option value="adventure">Adventure</option>
+                  <option value="strategy">Strategy</option>
+                </select>
+                <label for="cost">Maximum Cost:</label>
+                <input type="number" id="cost" name="cost">
+                <label for="release-date">Maximum Release Date:</label>
+                <input type="date" id="release-date" name="release-date">
+                <button type="submit" id="search">Search</button>
+            </form>
+        </div>
+    </div>
+    <h2>find your next adventure!</h2>
   </body>
 </html>
