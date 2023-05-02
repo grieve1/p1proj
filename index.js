@@ -27,7 +27,7 @@ searchButton.addEventListener("click", (event) => {
       if (releaseDate) {
         filteredGames = games.filter((game) => game.releaseDate === releaseDate);
         if (filteredGames.length === 0) {
-          searchResults.innerHTML = "No games found for selected release date.";
+          searchResults.innerHTML = "no games found for selected release date.";
           return;
         }
       }
@@ -36,7 +36,7 @@ searchButton.addEventListener("click", (event) => {
       if (maxCost > 0) {
         filteredGames = filteredGames.filter((game) => parseFloat(game.cheapest) <= maxCost);
         if (filteredGames.length === 0) {
-          searchResults.innerHTML = "No games found within the selected price range.";
+          searchResults.innerHTML = "no games found within the selected price range.";
           return;
         }
       }
@@ -78,7 +78,7 @@ searchButton.addEventListener("click", (event) => {
         buyLink.href = game.link;
       }
       buyLink.target = "_blank";
-      buyLink.innerText = "Buy now on Steam";
+      buyLink.innerText = "buy now on steam";
       gameRow.appendChild(buyLink);
 
       searchResults.appendChild(gameRow);
