@@ -55,6 +55,51 @@ body {
   }
 
   #search-results {
-    margin-top: 20px;
-    font-size: 16px;
+    background-image: url('https://cdn.pixabay.com/photo/2021/03/12/21/02/bubbles-6092162_1280.jpg');
+    background-repeat: repeat;
+    background-size: cover;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
   }
+  
+  .game-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  
+  .game-row img {
+    max-width: 300px;
+    max-height: 300px;
+    margin-bottom: 10px;
+  }
+  
+  .game-row h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .game-row p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .game-row a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #0077bb;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .game-row a:hover {
+    background-color: #005faa;
+  }
+  
