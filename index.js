@@ -2,7 +2,6 @@ const searchButton = document.getElementById("search");
 const genreDropdown = document.getElementById("genre");
 const searchResults = document.getElementById("search-results");
 const costInput = document.getElementById("cost");
-const releaseDateInput = document.getElementById("release-date");
 
 searchButton.addEventListener("click", (event) => {
   event.preventDefault();
@@ -10,7 +9,6 @@ searchButton.addEventListener("click", (event) => {
   // Get search parameters
   const selectedGenre = genreDropdown.value;
   const maxCost = parseFloat(costInput.value) || 0;
-  const releaseDate = releaseDateInput.value;
 
   // Prepare API URL
   let apiUrl = `https://www.cheapshark.com/api/1.0/games?title=${selectedGenre}`;
@@ -22,15 +20,7 @@ searchButton.addEventListener("click", (event) => {
   fetch(apiUrl)
     .then((response) => response.json())
     .then((games) => {
-      // Filter games by release date (if specified)
       let filteredGames = games;
-      if (releaseDate) {
-        filteredGames = games.filter((game) => game.releaseDate === releaseDate);
-        if (filteredGames.length === 0) {
-          searchResults.innerHTML = "no games found for selected release date.";
-          return;
-        }
-      }
 
       // Filter games by max cost (if specified)
       if (maxCost > 0) {
