@@ -50,13 +50,10 @@ body {
   }
 
   #search-results {
-    background-image: url('https://cdn.pixabay.com/photo/2021/03/12/21/02/bubbles-6092162_1280.jpg');
-    background-repeat: row;
-    background-size: cover;
+    background-repeat: grid;
     font-family: monospace;
     padding: 100px;
     display: grid;
-    font-stretch: ultra-expanded;
     color: #fff;
     flex-wrap: wrap;
     justify-content: grid;
@@ -65,23 +62,26 @@ body {
   
   .game-row {
     display: column;
-    flex-direction: row;
-    align-items: grid;
+    flex-direction: column;
+    align-items: column;
     color: #fff;
     font-family: monospace;
-    justify-content: grid;
+    justify-content: column;
     margin-bottom: 50px;
   }
   
   .game-row img {
-    height: 215px;
-    width: 460px;
+    height: 215;
+    width: 460;
     object-fit: cover;
     margin-bottom: 10px;
-  }
+    aspect-ratio: 92/43;
+    border: 5px solid #8400ff;
+    border-radius: 10px;
+  }  
   
   .game-row h3 {
-    font-family: monospace;
+    font-family: '8BIT WONDER', sans-serif;
     font-size: 24px;
     color: #fff;
     font-stretch: ultra-expanded;
@@ -109,5 +109,3 @@ body {
   .game-row a:hover {
     background-color: #8400ff;
   }
-  
-  
