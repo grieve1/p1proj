@@ -1,5 +1,7 @@
 Welcome to Game Finder! This application will allow you to find games online that are free-to-play, sort through different platforms to find your desired machine you play on, find the release date of games and much more!
 
+![Game Finder](game1.png)
+
 This application uses a combination of JavaScript, CSS, and HTML.
 
 Credits to:
