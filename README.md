@@ -1,1 +1,2 @@
-This is a README file.
+Welcome to Game Finder! This application will allow you to find games online that free-to-play, sort through different platforms to find your desired machine you play on, find the release date of games and much more!
+In order to get the data sent to you, we use the FreeToGame API which gives us leg room to cypher through different data points as mentioned above, while also keeping security in the backend. The code for this application is not open source, and is only useable for personal cases. There will be no newer versions of this as this will be the only client version and used as a practice showcase. Game Finder uses JavaScript, HTML and CSS for functionality and web page dependencies.
