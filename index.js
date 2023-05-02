@@ -13,8 +13,9 @@ searchButton.addEventListener('click', e => {
     fetch(`https://www.cheapshark.com/api/1.0/games?title=${selectedGenre}`)
       .then(response => response.json())
       .then(data => {
-        console.log(data); // just for testing
+        console.log(data);
         // code to display the search results
+        data.sort((a, b) => a.external.localeCompare(b.external));
         searchResults.innerHTML = ''; // clear previous results
         for (const game of data) {
           const gameRow = document.createElement('div');
