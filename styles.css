@@ -9,6 +9,13 @@ body {
     text-align: center;
     font-family: '8BIT WONDER', sans-serif;
   }
+
+  h2 {
+    color: #8400ff;
+    text-align: center;
+    font-family: monospace;
+    padding: 20px;
+  }
   
   
   form {
@@ -50,23 +57,24 @@ body {
   }
 
   #search-results {
-    background-repeat: grid;
-    font-family: monospace;
+    background-repeat: center;
     padding: 100px;
-    display: grid;
+    margin: 0 auto;
+    max-width: 480px;
+    display: center;
     color: #fff;
     flex-wrap: wrap;
-    justify-content: grid;
+    justify-content: center;
     gap: 20px;
   }
   
   .game-row {
-    display: column;
-    flex-direction: column;
-    align-items: column;
+    display: center;
+    flex-direction: center;
+    align-items: center;
     color: #fff;
     font-family: monospace;
-    justify-content: column;
+    justify-content: center;
     margin-bottom: 50px;
   }
   
@@ -78,7 +86,7 @@ body {
     aspect-ratio: 92/43;
     border: 5px solid #8400ff;
     border-radius: 10px;
-  }  
+  }
   
   .game-row h3 {
     font-family: '8BIT WONDER', sans-serif;
@@ -86,6 +94,7 @@ body {
     color: #fff;
     font-stretch: ultra-expanded;
     margin-bottom: 10px;
+    text-align: center;
   }
   
   .game-row p {
@@ -93,6 +102,7 @@ body {
     font-family: monospace;
     margin-bottom: 20px;
     color: #8400ff;
+    text-align: center;
   }
   
   .game-row a {
