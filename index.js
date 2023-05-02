@@ -34,7 +34,12 @@ searchButton.addEventListener('click', e => {
           gameRow.appendChild(price);
           
           const buyLink = document.createElement('a');
-          buyLink.href = `${game.link}&storeID=1`;
+          const steamStoreID = 1;
+          if (game.steamAppID !== null) {
+            buyLink.href = `https://store.steampowered.com/app/${game.steamAppID}/?utm_source=cheapshark&utm_medium=referral&utm_campaign=cheapshark`;
+          } else {
+            buyLink.href = game.link;
+          }
           buyLink.target = '_blank';
           buyLink.innerText = 'Buy now';
           gameRow.appendChild(buyLink);
