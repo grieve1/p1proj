@@ -1,62 +1,87 @@
 const searchButton = document.getElementById("search");
 const genreDropdown = document.getElementById("genre");
 const searchResults = document.getElementById("search-results");
-const button = document.getElementById('search')
+const costInput = document.getElementById("cost");
+const releaseDateInput = document.getElementById("release-date");
 
-button.addEventListener('mouseenter', changeColor);
-button.addEventListener('mouseleave', revertColor);
+searchButton.addEventListener("click", (event) => {
+  event.preventDefault();
 
-searchButton.addEventListener('click', e => {
-    e.preventDefault();
-    const selectedGenre = genreDropdown.value;
-  
-    fetch(`https://www.cheapshark.com/api/1.0/games?title=${selectedGenre}`)
-      .then(response => response.json())
-      .then(data => {
-        console.log(data); // just for testing
-        // sort the games alphabetically
-        data.sort((a, b) => a.external.localeCompare(b.external));
-        // code to display the search results
-        searchResults.innerHTML = ''; // clear previous results
-        for (const game of data) {
-          const gameRow = document.createElement('div');
-          gameRow.className = 'game-row';
-          
-          const thumbnail = document.createElement('img');
-          thumbnail.src = game.thumb;
-          thumbnail.alt = game.external;
-          gameRow.appendChild(thumbnail);
-          
-          const title = document.createElement('h3');
-          title.innerText = game.external;
-          gameRow.appendChild(title);
-          
-          const price = document.createElement('p');
-          price.innerText = `Price: ${game.cheapest}`;
-          gameRow.appendChild(price);
-          
-          const buyLink = document.createElement('a');
-          buyLink.href = `${game.link}&storeID=1`;
-          buyLink.target = '_blank';
-          buyLink.innerText = 'Buy now';
-          gameRow.appendChild(buyLink);
-          
-          searchResults.appendChild(gameRow);
+  // Get search parameters
+  const selectedGenre = genreDropdown.value;
+  const maxCost = parseFloat(costInput.value) || 0;
+  const releaseDate = releaseDateInput.value;
+
+  // Prepare API URL
+  let apiUrl = `https://www.cheapshark.com/api/1.0/games?title=${selectedGenre}`;
+  if (maxCost > 0) {
+    apiUrl += `&maxPrice=${maxCost}`;
+  }
+
+  // Fetch game data
+  fetch(apiUrl)
+    .then((response) => response.json())
+    .then((games) => {
+      // Filter games by release date (if specified)
+      let filteredGames = games;
+      if (releaseDate) {
+        filteredGames = games.filter((game) => game.releaseDate === releaseDate);
+        if (filteredGames.length === 0) {
+          searchResults.innerHTML = "No games found for selected release date.";
+          return;
         }
-      })
-      .catch(error => {
-        console.log('ERROR:', error);
+      }
+
+      // Filter games by max cost (if specified)
+      if (maxCost > 0) {
+        filteredGames = filteredGames.filter((game) => parseFloat(game.cheapest) <= maxCost);
+        if (filteredGames.length === 0) {
+          searchResults.innerHTML = "No games found within the selected price range.";
+          return;
+        }
+      }
+
+      displayGames(filteredGames);
+    })
+    .catch((error) => console.error(error));
+
+  function displayGames(games) {
+    // Clear previous results
+    searchResults.innerHTML = "";
+
+    // Display games
+    games.forEach((game) => {
+      const gameRow = document.createElement("div");
+      gameRow.className = "game-row";
+
+      const title = document.createElement("h3");
+      title.innerText = game.external;
+      gameRow.appendChild(title);
+
+      const thumbnail = document.createElement("img");
+      thumbnail.src = game.thumb;
+      thumbnail.alt = game.external;
+      thumbnail.style.imageRendering = "crisp-edges";
+      thumbnail.width = 460;
+      thumbnail.height = 215;
+      gameRow.appendChild(thumbnail);
+
+      const price = document.createElement("p");
+      price.innerText = `Price: ${game.cheapest}`;
+      gameRow.appendChild(price);
+
+      const buyLink = document.createElement("a");
+      const steamStoreID = 1;
+      if (game.steamAppID !== null) {
+        buyLink.href = `https://store.steampowered.com/app/${game.steamAppID}/?utm_source=cheapshark&utm_medium=referral&utm_campaign=cheapshark`;
+      } else {
+        buyLink.href = game.link;
+      }
+      buyLink.target = "_blank";
+      buyLink.innerText = "Buy now on Steam";
+      gameRow.appendChild(buyLink);
+
+      searchResults.appendChild(gameRow);
     });
-});
-
-function changeColor(event) {
-    const cardButton = event.target;
-    cardButton.style["background-color"] = "#ff0000";
-    cardButton.style.color = "#fff";
-}
-
-function revertColor(event) {
-    const cardButton = event.target;
-    cardButton.style["background-color"] = "#333";
-    cardButton.style.color = "fff";
-}
+  }
+})

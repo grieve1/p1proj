@@ -1,4 +1,5 @@
 body {
+    font-family: monospace;
     background-color: #1f1f1f;
     padding: 20px;
   }
@@ -8,6 +9,7 @@ body {
     text-align: center;
     font-family: '8BIT WONDER', sans-serif;
   }
+  
   
   form {
     background-color: #fff;
@@ -44,51 +46,52 @@ body {
   }
   
   button[type="submit"]:hover {
-    background-color: #6d4197;
+    background-color: #8400ff;
   }
 
   #search-results {
     background-image: url('https://cdn.pixabay.com/photo/2021/03/12/21/02/bubbles-6092162_1280.jpg');
-    background-repeat: repeat;
+    background-repeat: row;
     background-size: cover;
     font-family: monospace;
-    padding: 20px;
-    display: block;
+    padding: 100px;
+    display: grid;
+    font-stretch: ultra-expanded;
     color: #fff;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: grid;
     gap: 20px;
   }
   
   .game-row {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: column;
+    flex-direction: row;
+    align-items: grid;
     color: #fff;
     font-family: monospace;
-    justify-content: center;
-    margin-bottom: 10px;
+    justify-content: grid;
+    margin-bottom: 50px;
   }
   
   .game-row img {
-    max-width: 150px;
-    max-height: 150px;
-    color: #fff;
-    font-family: monospace;
+    height: 215px;
+    width: 460px;
+    object-fit: cover;
     margin-bottom: 10px;
   }
   
   .game-row h3 {
+    font-family: monospace;
     font-size: 24px;
     color: #fff;
-    font-family: monospace;
+    font-stretch: ultra-expanded;
     margin-bottom: 10px;
   }
   
   .game-row p {
     font-size: 18px;
     font-family: monospace;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     color: #8400ff;
   }
   
@@ -99,11 +102,12 @@ body {
     color: #fff;
     background-color: #000000;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 10px;
     transition: background-color 0.2s ease;
   }
   
   .game-row a:hover {
     background-color: #8400ff;
   }
+  
   
