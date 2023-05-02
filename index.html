@@ -7,23 +7,27 @@
   </head>
   <body>
     <div id="main">
-        <h1>Game Finder</h1>
+        <h1>GAME FINDER</h1>
+        <h2>🎮find your next adventure!🎮</h2>
         <div id="search-div">
             <form>
-                <label for="genre">Select a Genre:</label>
+                <label for="genre">select a genre:</label>
                 <select id="genre">
-                  <option value="action">Action</option>
-                  <option value="adventure">Adventure</option>
-                  <option value="strategy">Strategy</option>
+                  <option value="racing">racing</option>
+                  <option value="strategy">strategy</option>
+                  <option value="shooter">shooter</option>
+                  <option value="horror">horror</option>
                 </select>
-                <label for="cost">Maximum Cost:</label>
+                <label for="cost">max cost:</label>
                 <input type="number" id="cost" name="cost">
-                <label for="release-date">Maximum Release Date:</label>
+                <label for="release-date">release date:</label>
                 <input type="date" id="release-date" name="release-date">
                 <button type="submit" id="search">Search</button>
             </form>
         </div>
     </div>
-    <h2>find your next adventure!</h2>
+    <div id="container">
+        <div id="search-results"></div>
+    </div>
   </body>
 </html>
