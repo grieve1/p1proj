@@ -2,8 +2,6 @@ const searchButton = document.getElementById("search");
 const genreDropdown = document.getElementById("genre");
 const searchResults = document.getElementById("search-results");
 const button = document.getElementById('search')
-const resultsPerPage = 10;
-let currentPage = 1;
 
 button.addEventListener('mouseenter', changeColor);
 button.addEventListener('mouseleave', revertColor);
@@ -36,7 +34,7 @@ searchButton.addEventListener('click', e => {
           gameRow.appendChild(price);
           
           const buyLink = document.createElement('a');
-          buyLink.href = game.link;
+          buyLink.href = `${game.link}&storeID=1`;
           buyLink.target = '_blank';
           buyLink.innerText = 'Buy now';
           gameRow.appendChild(buyLink);
@@ -47,7 +45,7 @@ searchButton.addEventListener('click', e => {
       .catch(error => {
         console.log('ERROR:', error);
     });
-})
+});
 
 function changeColor(event) {
     const cardButton = event.target;
