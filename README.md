@@ -1,1 +1,0 @@
-![Alt Text](p1proj/GameSnippet.png)
