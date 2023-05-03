@@ -1,123 +1,125 @@
 body {
-    background-color: #1f1f1f;
-    padding: 20px;
-    
-  }
-  
-  h1 {
-    color: #ffffff;
-    text-align: center;
-    font-family: '8BIT WONDER', sans-serif;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,1px 1px 0 #000;
-  }
+  background-color: #1f1f1f;
+  padding: 20px;
 
-  h2 {
-    color: #8400ff;
-    text-align: center;
-    font-family: monospace;
-    padding: 20px;
-  }
-  
-  
-  form {
-    background-color: #fff;
-    font-family: monospace;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    max-width: 500px;
-    margin: 0 auto;
-  }
-  
-  label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  select, input[type="number"], input[type="date"] {
-    padding: 5px;
-    border-radius: 5px;
-    border: none;
-    width: 100%;
-    margin-bottom: 10px;
-  }
-  
-  button[type="submit"] {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #8400ff;
-  }
+}
 
-  #search-results {
-    background-repeat: center;
-    padding: 100px;
-    margin: 0 auto;
-    max-width: 480px;
-    display: center;
-    color: #fff;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .game-row {
-    display: center;
-    flex-direction: center;
-    align-items: center;
-    color: #fff;
-    font-family: monospace;
-    justify-content: center;
-    margin-bottom: 50px;
-  }
-  
-  .game-row img {
-    height: 215;
-    width: 460;
-    object-fit: cover;
-    margin-bottom: 10px;
-    border: 5px solid #8400ff;
-    border-radius: 10px;
-  }
-  
-  .game-row h3 {
-    font-family: '8BIT WONDER', sans-serif;
-    font-size: 24px;
-    color: #fff;
-    font-stretch: ultra-expanded;
-    margin-bottom: 10px;
-    text-align: center;
-  }
-  
-  .game-row p {
-    font-size: 18px;
-    font-family: monospace;
-    margin-bottom: 20px;
-    color: #8400ff;
-    text-align: center;
-  }
-  
-  .game-row a {
-    font-size: 18px;
-    font-family: monospace;
-    text-decoration: none;
-    color: #fff;
-    background-color: #000000;
-    padding: 10px;
-    border-radius: 10px;
-    display: block;
-    text-align: center;
-    transition: background-color 0.2s ease;
-  }
-  
-  .game-row a:hover {
-    background-color: #8400ff;
-  }
+h1 {
+  color: #ffffff;
+  text-align: center;
+  font-family: '8BIT WONDER', sans-serif;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+h2 {
+  color: #8400ff;
+  text-align: center;
+  font-family: monospace;
+  padding: 20px;
+}
+
+
+form {
+  background-color: #fff;
+  font-family: monospace;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+select,
+input[type="number"],
+input[type="date"] {
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+button[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+  background-color: #8400ff;
+}
+
+#search-results {
+  background-repeat: center;
+  padding: 100px;
+  margin: 0 auto;
+  max-width: 480px;
+  display: center;
+  color: #fff;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.game-row {
+  display: center;
+  flex-direction: center;
+  align-items: center;
+  color: #fff;
+  font-family: monospace;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.game-row img {
+  height: 215;
+  width: 460;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 5px solid #8400ff;
+  border-radius: 10px;
+}
+
+.game-row h3 {
+  font-family: '8BIT WONDER', sans-serif;
+  font-size: 24px;
+  color: #fff;
+  font-stretch: ultra-expanded;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.game-row p {
+  font-size: 18px;
+  font-family: monospace;
+  margin-bottom: 20px;
+  color: #8400ff;
+  text-align: center;
+}
+
+.game-row a {
+  font-size: 18px;
+  font-family: monospace;
+  text-decoration: none;
+  color: #fff;
+  background-color: #000000;
+  padding: 10px;
+  border-radius: 10px;
+  display: block;
+  text-align: center;
+  transition: background-color 0.2s ease;
+}
+
+.game-row a:hover {
+  background-color: #8400ff;
+}

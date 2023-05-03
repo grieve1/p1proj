@@ -2,6 +2,10 @@ const searchButton = document.getElementById("search");
 const genreDropdown = document.getElementById("genre");
 const searchResults = document.getElementById("search-results");
 const costInput = document.getElementById("cost");
+const button = document.getElementById('search');
+
+button.addEventListener('mouseenter', changeColor);
+button.addEventListener('mouseleave', revertColor)
 
 searchButton.addEventListener("click", (event) => {
   event.preventDefault();
