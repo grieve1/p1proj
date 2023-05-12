@@ -1,1 +1,2 @@
 ![A screenshot of the first look on the website.](https://github.com/grieve1/p1proj/blob/main/GameSnippet.png)
+![A screenshot of the first look on the website.](https://github.com/grieve1/p1proj/blob/main/GameSnippet2.png)
