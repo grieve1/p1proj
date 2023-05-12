@@ -3,3 +3,5 @@ Welcome to Game Finder! The web application that will help you find the cheapest
 
 ![A screenshot of the first look on the website.](https://github.com/grieve1/p1proj/blob/main/GameSnippet2.png)
 After you have selected a genre, you are to free to set a MAX COST which will filter out games up to the highest price you insert. Games will then be presented to you with a link to buy the game on steam.
+
+A big thank you to CheapShark for providing the API, which allows this application to give you data! https://apidocs.cheapshark.com/
