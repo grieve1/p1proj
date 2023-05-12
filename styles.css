@@ -1,14 +1,12 @@
 body {
   background-color: #1f1f1f;
-  padding: 20px;
-
+  padding: 20px
 }
 
 h1 {
   color: #ffffff;
   text-align: center;
   font-family: '8BIT WONDER', sans-serif;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 h2 {
@@ -23,7 +21,7 @@ form {
   background-color: #fff;
   font-family: monospace;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   max-width: 500px;
   margin: 0 auto;
@@ -50,7 +48,7 @@ button[type="submit"] {
   color: #fff;
   border: none;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
@@ -86,7 +84,7 @@ button[type="submit"]:hover {
   width: 460;
   object-fit: cover;
   margin-bottom: 10px;
-  border: 5px solid #8400ff;
+  border: 10px solid #8400ff;
   border-radius: 10px;
 }
 

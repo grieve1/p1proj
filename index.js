@@ -7,6 +7,18 @@ const button = document.getElementById('search');
 button.addEventListener('mouseenter', changeColor);
 button.addEventListener('mouseleave', revertColor)
 
+function changeColor(event) {
+  const cardButton = event.target;
+  cardButton.style["background-color"] = "#6d4197";
+  cardButton.style.color = "#fff";
+}
+
+function revertColor(event) {
+  const cardButton = event.target;
+  cardButton.style["background-color"] = "#333";
+  cardButton.style.color = "fff";
+}
+
 searchButton.addEventListener("click", (event) => {
   event.preventDefault();
 
